@@ -26,7 +26,8 @@ fig_a <- ggplot() +
   geom_point(
     data = plot_data,
     mapping = aes(x = group, y = value, colour = variable)
-  )
+  ) +
+  theme_dark()
 
 ggsave(filename = "fig-a.png",
        plot = fig_a,
