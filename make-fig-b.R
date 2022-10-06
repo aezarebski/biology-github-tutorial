@@ -14,9 +14,8 @@ my_data <- read.csv("mtcars-renamed.csv")
 ## for plotting with ggplot2.
 ## =========================================================
 
-plot_data <- my_data %>%
-  select(predictor1, predictor2, response, group) %>%
-  melt(id.vars = "group")
+source("reshape-data-function.R")
+plot_data <- reshape_data(my_data)
 
 ## =========================================================
 ## Plot the data and save the result so we can see it after
