@@ -26,7 +26,8 @@ fig_b <- ggplot() +
   geom_point(
     data = plot_data,
     mapping = aes(x = group, y = value, colour = variable)
-  )
+  ) +
+  scale_y_log10()
 
 ggsave(filename = "fig-b.png",
        plot = fig_b,
